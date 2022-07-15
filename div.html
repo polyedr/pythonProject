@@ -3,40 +3,115 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DIV</title>
+    <title>The Death of Socrates by David</title>
     <style>
-        .div1 {
+        header {
+            background-color: #999;
+            padding: 10px;
+            text-align: center;
+            font-size: 25px;
+            color: black;
+        }
+        footer {
+            background-color: #999;
+            padding: 10px;
+            text-align: center;
+            font-size: 25px;
+            color: black;
+        }
+        .left {
             float: left;
             background-color: transparent;
-            height: 100px;
-            width: 200px;
+            height: 80%;
+            width: 30%;
+            padding: 0;
+            border: 0px solid black;
+            display: inline-block;
+        }
+        .middle {
+            background-color: transparent;
+            height: 80%;
+            width: 40%;
+            left: 30%;
+            padding: 0;
+            border: 0px solid black;
+            display: inline-block;
+        }
+        .right {
+            float: right;
+            background-color: transparent;
+            height: 80%;
+            width: 30%;
+            left: 70%;
+            padding: 0;
+            border: 0px solid black;
+            display: inline-block;
+        }
+        .img_div {
+            width: 600px;
+            height: 394px;
+            background: url(image/wikimedia_death_of_socrates.jpg) no-repeat center;
+            border: 3px solid black;
+            margin: 0 auto;
+        }
+        .div1 {
+            position: absolute;
+            background-color: transparent;
+            height: 227px;
+            width: 108px;
+            margin-left: 174px;
+            margin-top: 139px;
             padding: 0;
             border: 3px solid yellow;
             display: block;
         }
         .div2 {
+            position: absolute;
             background-color: transparent;
-            height: 200px;
-            width: 400px;
-            margin-left: 200px;
-            margin-top: 100px;
+            height: 209px;
+            width: 91px;
+            margin-left: 347px;
+            margin-top: 114px;
             padding: 0;
-            border: 3px solid red;
-            display: inline-block;
+            border: 3px solid yellow;
+            display: block;
         }
         .div3 {
-            float: right;
+            position: absolute;
             background-color: transparent;
-            height: 100px;
-            width: 200px;
-            margin-top: 100px;
+            height: 17px;
+            width: 22px;
+            margin-left: 305px;
+            margin-top: 170px;
             padding: 0;
-            border: 3px solid green;
-            display: inline-block;
+            border: 3px solid yellow;
+            display: block;
         }
     </style>
 </head>
 <body>
-        <div><div class="div1">div1</div><div class="div2">div2</div><div class="div3">div3</div></div>
+    <header>
+        <h2>The Death of Socrates by David</h2>
+    </header>
+        <div><div class="left"><nav><ul><li><a href="https://www.robots.ox.ac.uk/~vgg/software/via/">VGG Image Annotator (VIA)</a></li><li><a href="https://www.w3schools.com/html/default.asp">HTML tutorial w3schools</a></li><li><a href="https://www.w3schools.com/css/default.asp">CSS tutorial w3schools</a></li></ul></nav></div><div class="middle"><div class="img_div"><div class="div1" style="color: white">1</div><div class="div2" style="color: white">2</div><div class="div3" style="color: white">3</div></div></div><div class="right"><table border="5" class="table"><tr><th>number</th><th>name</th><th>type</th><th>image_quality</th></tr><tr><td>1</td><td><input class="text" value="Plato" /></td><td><select><option selected="selected" value="human">human</option><option value="cup">cup</option><option value="unknown">unknown</option></select></td><td><input type="checkbox">Blurred region</input><input checked="" type="checkbox">Good Illumination</input><input type="checkbox">Object in Frontal View</input></td></tr><tr><td>2</td><td><input class="text" value="Socrates" /></td><td><select><option selected="selected" value="human">human</option><option value="cup">cup</option><option value="unknown">unknown</option></select></td><td><input type="checkbox">Blurred region</input><input checked="" type="checkbox">Good Illumination</input><input checked="" type="checkbox">Object in Frontal View</input></td></tr><tr><td>3</td><td><input class="text" value="Hemlock" /></td><td><select><option value="human">human</option><option selected="selected" value="cup">cup</option><option value="unknown">unknown</option></select></td><td><input type="checkbox">Blurred region</input><input type="checkbox">Good Illumination</input><input type="checkbox">Object in Frontal View</input></td></tr></table></div></div>
+    <footer>
+        <ul>
+            <li style="display: inline-block">
+                <a href="https://www.robots.ox.ac.uk/~vgg/software/via/">
+                    VGG Image Annotator (VIA)
+                </a>
+            </li>
+            <li style="display: inline-block">
+                <a href="https://www.w3schools.com/html/default.asp">
+                    HTML tutorial w3schools
+                </a>
+            </li>
+            <li style="display: inline-block">
+                <a href="https://www.w3schools.com/css/default.asp">
+                    CSS tutorial w3schools
+                </a>
+            </li>
+        </ul>
+    </footer>
 </body>
 </html>

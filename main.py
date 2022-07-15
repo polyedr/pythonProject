@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 from io import BytesIO
 from jsonpath import jsonpath
 
-with open('json-doc/via_project_6Jul2022_1h18m_json.json') as json_file:
+with open('json-doc/via_project_6Jul2022_1h18m_json1.json') as json_file:
     via_file = json.load(json_file)
 
 # Extract element content from JSON #
