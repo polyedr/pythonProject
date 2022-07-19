@@ -9,6 +9,7 @@ with open('json-doc/via_project_6Jul2022_1h18m_json.json') as json_file:
     via_file = json.load(json_file)
 
 # Extract element content from JSON #
+# Comment: At the current step, they are more shapes rather than elements
 filename_value = jsonpath(via_file, "$..filename")
 size_value = jsonpath(via_file, "$..size")
 
@@ -32,7 +33,7 @@ w = img.width
 h = img.height
 
 # Build ElementTree #
-root = ET.Element("div")
+root = ET.Element("div")  # Comment: ok
 
 # Body left div #
 body_left = ET.SubElement(root, "div")
@@ -53,6 +54,8 @@ a3.set('href', 'https://www.w3schools.com/css/default.asp')
 a3.text = str('CSS tutorial w3schools')
 
 # Body middle div #
+# Comment: Better concentrate on correct processing of the rectangles shapes
+# Comment: This block is important, instead of left and right blocks
 body_middle = ET.SubElement(root, "div")
 body_middle.set('class', 'middle')
 

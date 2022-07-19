@@ -8,12 +8,14 @@ with open('json-doc/via_project_6Jul2022_1h18m_json1.json') as json_file:
     via_file = json.load(json_file)
 
 # Extract element content from JSON #
+# Comment: At the current step, they are more shapes rather than elements
 filename_value = jsonpath(via_file, "$..filename")
 size_value = jsonpath(via_file, "$..size")
 
 name_shape_value = jsonpath(via_file, "$..shape_attributes.name")
 x_value = jsonpath(via_file, "$..shape_attributes.x")
 cx_value = jsonpath(via_file, "$..shape_attributes.cx")
+# Comment: No ellipses and no cx, cy, rx, ry attributes in use
 y_value = jsonpath(via_file, "$..shape_attributes.y")
 cy_value = jsonpath(via_file, "$..shape_attributes.cy")
 width_value = jsonpath(via_file, "$..shape_attributes.width")
@@ -31,6 +33,7 @@ image_url_value = jsonpath(via_file, "$..file_attributes.image_url")
 
 # Build XML ElementTree #
 root = ET.Element("image")  # XML root node
+# Comment: Use divs only, root = ET.Element("div")
 filename = ET.SubElement(root, "filename")
 filename.text = str(filename_value[0])
 size = ET.SubElement(root, "size")  # Write data to XML ElementTree
@@ -115,6 +118,7 @@ for child in xml_tree.iter('shape_attributes'):
 # Use loop to generate the DIV structure and css style under HTML #
 grid = ""
 div = ""
+# Comment: display: inline-block; will not work after position: absolute
 for a in range(len(name_list)):
     if name_list[a] == "rect":
         grid = grid + """.grid""" + str(a) + """ {
@@ -137,7 +141,6 @@ for a in range(len(name_list)):
                     height: 100px;
                     width: 500px;
                 }"""
-
     elif name_list[a] == "ellipse":
         grid = grid + """.grid""" + str(a) + """ {
                     background-color: transparent;
